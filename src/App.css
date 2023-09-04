@@ -1,38 +1,142 @@
-.App {
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.app {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  padding: 30px;
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.password-generator{
+  text-align: left;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #333;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.password-generator {
+  margin-bottom: 20px;
+}
+
+label {
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: #555;
+  width: 100%;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+}
+input{
+  width: 20px; 
+  height: 20px; 
 }
 
-.App-link {
-  color: #61dafb;
+input[type="number"] {
+  width: 40px;
+  padding: 4px;
+  margin-left: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  outline: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+.pass_generate{
+  width: 100%;
+  text-align: center;
+  margin-top: 25px;
+}
+
+.password-display {
+  width: 100%;
+  font-size: 20px;
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.password-display p {
+  height: 25px;
+  min-width: 300px;
+  background-color: #eee;
+  padding: 10px;
+  border-radius: 4px 0 0 4px;
+  flex-grow: 1;
+}
+.password-display img {
+  width: 25px;
+}
+
+.copy-button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 0 4px 4px 0;
+  padding: 8px 12px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.copy-button:hover {
+  background-color: #0056b3;
+}
+
+@media (max-width: 565px) {
+  .app {
+    padding: 15px;
   }
-  to {
-    transform: rotate(360deg);
+  .password-generator h2{
+    font-size: 18px;
+  }
+  .password-display {
+    width: 100%;
+    font-size: 14px;
+  }
+  .password-display p {
+    height: 16px;
+    min-width: 200px;
+  }
+  .password-display img {
+    width: 21px;
+  }
+  .copy-button {
+    padding: 6px 10px;
+    font-size: 12px;
+  }
+  label{
+    font-size: 14px;
+  }
+  input{
+    width: 15px; 
+    height: 15px; 
   }
 }
